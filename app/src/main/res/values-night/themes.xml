@@ -1,0 +1,11 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MyEcon" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="android:windowBackground">@color/dark_purple</item>
+        <item name="android:navigationBarColor">@color/purple_for_bars_dark</item>
+        <item name="colorPrimaryDark">@color/purple_for_bars_dark</item>
+        <item name="android:textColorPrimary">@color/light_purple</item>
+    </style>
+</resources>

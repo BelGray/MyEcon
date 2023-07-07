@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MyEcon</string>
+    <string name="goal_text_q">Описание твоей цели</string>
+    <string name="goal_name_q">Название твоей цели</string>
+    <string name="goal_amount_q">Сколько хочешь накопить? :)</string>
+    <string name="goal_current_amount_q">Сколько уже накоплено? :)</string>
+    <string name="goal_progress">Прогресс</string>
+    <string name="goal_current_amount">Накоплено</string>
+    <string name="goal">Цель</string>
+    <string name="create_task">Добавить задание</string>
+    <string name="delete_task">Удалить задание</string>
+    <string name="task_completed">Выполнено</string>
+    <string name="complete_task_amount_q">Сколько ты получишь при выполнении?</string>
+    <string name="task_text_q">Опиши задание</string>
+    <string name="task_text">Описание задания</string>
+    <string name="goals">Цели</string>
+    <string name="tasks">Задания</string>
+</resources>
