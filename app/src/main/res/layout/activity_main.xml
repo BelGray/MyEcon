@@ -18,6 +18,7 @@
             >
 
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mainGoalCardView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:cardBackgroundColor="@color/purple_for_ui"
@@ -26,19 +27,56 @@
 
                 <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     >
 
                     <TextView
+                        android:id="@+id/goalText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text=""
+                        android:text="@string/goal"
+                        android:textColor="@color/light_purple"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="15dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/mainGoalProgressPercents"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-- / 100%"
+                        android:textColor="@color/blue_for_ui"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="16dp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/mainGoalProgressRubles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-- / --"
+                        android:textColor="@color/light_purple"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="16dp"
+
                         />
 
                     <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/mainGoalProgressLine"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:indicatorColor="@color/blue_for_ui"
+                        android:scaleY="5"
                         android:progress="0"
                         android:layout_alignParentBottom="true"
                         />

@@ -15,4 +15,6 @@
     <string name="task_text">Описание задания</string>
     <string name="goals">Цели</string>
     <string name="tasks">Задания</string>
+    <string name="plus_100">+100</string>
+    <string name="minas_100">-100</string>
 </resources>
