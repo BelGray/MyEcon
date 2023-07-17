@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    tools:context=".layout.ShowGoalInfoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/deleteButton"
+        android:layout_marginBottom="25dp"
+        android:layout_alignParentTop="true"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/goalTextRelativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <TextView
+                        android:id="@+id/goalLabelTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goal"
+                        android:layout_centerInParent="true"
+                        android:textStyle="bold"
+                        android:textSize="30sp"
+                        />
+
+                </RelativeLayout>
+
+                <com.google.android.material.progressindicator.LinearProgressIndicator
+                    android:id="@+id/goalProgressLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:indicatorColor="@color/blue_for_ui"
+                    android:scaleY="3.5"
+                    android:layout_marginBottom="10dp"
+                    android:progress="30"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/goalProgressPerc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30%"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue_for_ui"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100%"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_alignParentEnd="true"
+                        />
+
+                </RelativeLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="2dp"
+                    app:cardBackgroundColor="@color/purple_for_ui"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/minusOneImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_exposure_neg_1_24"
+                            android:backgroundTint="@color/purple_for_background"
+                            />
+
+                        <ImageButton
+                            android:id="@+id/plusOneImageButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_exposure_plus_1_24"
+                            android:backgroundTint="@color/purple_for_background"
+                            android:layout_alignParentEnd="true"
+                            />
+
+                        <EditText
+                            android:id="@+id/progressEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_toEndOf="@id/minusOneImageButton"
+                            android:layout_toStartOf="@id/plusOneImageButton"
+                            android:hint="Прогресс (%)"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/light_purple"
+                            android:textColor="@color/light_purple"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            />
+
+
+
+                    </RelativeLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/goalNameTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="100"
+                    app:boxStrokeWidth="2dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/goal_name"
+                        android:textSize="19sp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/goalDescriptionTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="5000"
+                    app:boxStrokeWidth="2dp"
+                    android:layout_marginBottom="15dp"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/goal_text"
+                        android:textSize="19sp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/goBackAndSaveButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/go_back_and_save"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/light_purple"
+        android:layout_alignParentBottom="true"
+        />
+
+    <Button
+        android:id="@+id/tasksButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/tasks"
+        android:layout_above="@id/goBackAndSaveButton"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/light_purple"
+        />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/delete_goal"
+        android:layout_above="@id/tasksButton"
+        android:textStyle="bold"
+        android:backgroundTint="@color/red_for_ui"
+        android:textSize="20sp"
+        android:textColor="@color/light_purple"
+        />
+
+</RelativeLayout>

@@ -4,8 +4,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_purple">#F1E7F8</color>
     <color name="dark_purple">#170525</color>
+    <color name="purple_for_background">#7A3FA5</color>
     <color name="purple_for_ui">#8A4ABE</color>
-    <color name="blue_for_ui">#3BA1E1</color>
+    <color name="blue_for_ui">#4aa5be</color>
+    <color name="red_for_ui">#be4a4a</color>
     <color name="purple_for_bars_light">#C187F1</color>
     <color name="purple_for_bars_dark">#390E5A</color>
+    <color name="success">#4abe72</color>
 </resources>

@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".layout.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="630dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -23,6 +23,7 @@
                 android:layout_height="200dp"
                 app:cardBackgroundColor="@color/purple_for_ui"
                 android:padding="10dp"
+                android:visibility="gone"
                 >
 
                 <RelativeLayout
@@ -30,17 +31,85 @@
                     android:layout_height="match_parent"
                     >
 
-                    <TextView
-                        android:id="@+id/goalText"
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/no_any_main_goal" />
+
+                </RelativeLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/noMainGoalCardView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:cardBackgroundColor="@color/purple_for_ui"
+                android:padding="10dp"
+                android:visibility="visible"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/goalTypeRelativeLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/goal"
-                        android:textColor="@color/light_purple"
-                        android:textSize="30sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_alignParentEnd="true">
+
+                        <ImageView
+                            android:id="@+id/cookieImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleY="1.2"
+                            android:scaleX="1.2"
+                            android:src="@drawable/baseline_cookie_24"
+                            android:visibility="visible"
+                            />
+
+                        <ImageView
+                            android:id="@+id/rubleImageView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scaleY="1.2"
+                            android:scaleX="1.2"
+                            android:src="@drawable/baseline_currency_ruble_24"
+                            android:visibility="gone"
+                            />
+
+                    </RelativeLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/mainGoalProgressPercents"
+                        android:layout_toStartOf="@+id/goalTypeRelativeLayout"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="15dp"
                         android:layout_marginStart="15dp"
-                        />
+                        >
+
+                        <TextView
+                            android:id="@+id/goalText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/goal"
+                            android:textColor="@color/light_purple"
+                            android:textSize="30sp"
+                            android:textStyle="bold"
+                            />
+
+                    </ScrollView>
+
 
                     <TextView
                         android:id="@+id/mainGoalProgressPercents"
@@ -88,9 +157,21 @@
 
             </com.google.android.material.card.MaterialCardView>
 
-        </LinearLayout>
+
+        </RelativeLayout>
+
 
     </ScrollView>
 
+    <Button
+        android:id="@+id/myGoalsButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/my_goals"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/light_purple"
+        android:layout_alignParentBottom="true"
+        />
 
 </RelativeLayout>

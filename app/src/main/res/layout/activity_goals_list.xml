@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    tools:context=".layout.GoalsListActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="575dp">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/goalsListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/goal_item"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_goals"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/createGoalButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/create_goal"
+            android:textStyle="bold"
+            android:layout_marginBottom="3dp"
+            android:textSize="20sp"
+            android:textColor="@color/light_purple"
+            android:layout_above="@+id/goBackButton"
+            />
+
+        <Button
+            android:id="@+id/goBackButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/go_back"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/light_purple"
+            android:layout_alignParentBottom="true"
+            />
+
+</RelativeLayout>

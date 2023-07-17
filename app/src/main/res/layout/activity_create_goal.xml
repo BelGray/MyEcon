@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".layout.CreateGoalActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="615dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/createGoalTextRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_goal"
+                    android:layout_centerInParent="true"
+                    android:textStyle="bold"
+                    android:textSize="30sp"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/createGoalTextLinearLayout"
+                android:layout_below="@+id/createGoalTextRelativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/goalNameTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="100"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:hint="@string/goal_name_q"
+                        android:textSize="17sp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/goalDescriptionTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="5000"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:hint="@string/goal_text_q"
+                        android:textSize="17sp"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goal_type"
+                        android:textSize="17sp"
+                        android:textStyle="normal"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageButton
+                            android:id="@+id/finGoalImageButton"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_currency_ruble_24"
+                            android:backgroundTint="@color/purple_for_ui"
+                            />
+                        <ImageButton
+                            android:id="@+id/anotherGoalImageButton"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/baseline_cookie_24"
+                            android:backgroundTint="@color/purple_for_ui"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/finGoalLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/goalAmountTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:hint="@string/goal_amount_q"
+                            android:textSize="17sp"
+                            android:inputType="numberDecimal"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/goalCurrentAmountTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:hint="@string/current_goal_progress_rub"
+                            android:textSize="17sp"
+                            android:inputType="numberDecimal"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/createFinGoalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:text="@string/create_goal"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:backgroundTint="@color/purple_for_ui"
+                        android:textColor="@color/light_purple"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/anotherGoalLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/goalCurrentProgressTextInputLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:errorEnabled="true"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="65dp"
+                            android:hint="@string/current_goal_progress_perc"
+                            android:textSize="17sp"
+                            android:inputType="numberDecimal"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/createAnotherGoalButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:text="@string/create_goal"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:backgroundTint="@color/purple_for_ui"
+                        android:textColor="@color/light_purple"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/go_back"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/light_purple"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>

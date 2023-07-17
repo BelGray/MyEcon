@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    tools:context=".layout.TasksListActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/createTaskButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tasksListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/task_item"
+            android:visibility="gone"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/finTasksListRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/fin_task_item"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/noTasksImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/no_tasks"
+            android:layout_centerInParent="true"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            android:visibility="visible"
+            />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/goBackButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/go_back"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/light_purple"
+        android:layout_alignParentBottom="true"
+        />
+
+    <Button
+        android:id="@+id/createTaskButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="@string/create_task"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_above="@id/goBackButton"
+        android:textColor="@color/light_purple"
+        />
+
+</RelativeLayout>

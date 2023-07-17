@@ -8,8 +8,10 @@
         <item name="android:navigationBarColor">@color/purple_for_ui</item>
         <item name="colorPrimaryDark">@color/purple_for_ui</item>
         <item name="android:textColorPrimary">@color/dark_purple</item>
+        <item name="colorPrimary">@color/blue_for_ui</item>
 
     </style>
 
     <style name="Theme.MyEcon" parent="Base.Theme.MyEcon" />
+
 </resources>
