@@ -1,12 +1,13 @@
-package belgrays.android_app.my_econ.layout;
-
-import android.os.Bundle;
+package belgrays.android_app.my_econ.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Bundle;
+
 import belgrays.android_app.my_econ.databinding.ActivityMainBinding;
 
-public class ShowGoalInfoActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
+
     private ActivityMainBinding binding;
 
     @Override

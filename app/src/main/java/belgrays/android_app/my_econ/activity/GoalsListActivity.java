@@ -1,4 +1,4 @@
-package belgrays.android_app.my_econ.layout;
+package belgrays.android_app.my_econ.activity;
 
 import android.os.Bundle;
 

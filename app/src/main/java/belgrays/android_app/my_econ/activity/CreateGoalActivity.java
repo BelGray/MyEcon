@@ -1,4 +1,4 @@
-package belgrays.android_app.my_econ.layout;
+package belgrays.android_app.my_econ.activity;
 
 import android.os.Bundle;
 
@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import belgrays.android_app.my_econ.databinding.ActivityMainBinding;
 
-public class CreateTaskActivity extends AppCompatActivity {
+public class CreateGoalActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
     @Override

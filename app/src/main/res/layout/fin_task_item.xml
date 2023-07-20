@@ -27,7 +27,7 @@
             >
 
             <TextView
-                android:id="@+id/taskTextView"
+                android:id="@+id/taskTextTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/task_text"

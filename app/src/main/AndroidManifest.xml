@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyEcon"
         tools:targetApi="31">
         <activity
-            android:name=".layout.MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
@@ -24,43 +24,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".layout.CreateFinTaskActivity"
+            android:name=".activity.CreateFinTaskActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
         </activity>
         <activity
-            android:name=".layout.CreateGoalActivity"
+            android:name=".activity.CreateGoalActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
         </activity>
         <activity
-            android:name=".layout.CreateTaskActivity"
+            android:name=".activity.CreateTaskActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
         </activity>
         <activity
-            android:name=".layout.GoalsListActivity"
+            android:name=".activity.GoalsListActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
         </activity>
         <activity
-            android:name=".layout.ShowFinGoalInfoActivity"
+            android:name=".activity.ShowFinGoalInfoActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
         </activity>
         <activity
-            android:name=".layout.ShowGoalInfoActivity"
+            android:name=".activity.ShowGoalInfoActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
         </activity>
         <activity
-            android:name=".layout.TasksListActivity"
+            android:name=".activity.TasksListActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">

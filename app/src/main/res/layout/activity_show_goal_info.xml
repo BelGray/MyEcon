@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:padding="20dp"
-    tools:context=".layout.ShowGoalInfoActivity">
+    tools:context=".activity.ShowGoalInfoActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="2dp"
                     app:cardBackgroundColor="@color/purple_for_ui"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="5dp"
                     >
 
                     <RelativeLayout
@@ -129,6 +129,14 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
+                <CheckBox
+                    android:id="@+id/mainGoalCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_goal_like_main"
+                    android:textSize="17sp"
+                    />
+
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/goalNameTextInputLayout"
                     android:layout_width="match_parent"
@@ -156,7 +164,6 @@
                     app:counterEnabled="true"
                     app:counterMaxLength="5000"
                     app:boxStrokeWidth="2dp"
-                    android:layout_marginBottom="15dp"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -167,7 +174,6 @@
                         />
 
                 </com.google.android.material.textfield.TextInputLayout>
-
 
             </LinearLayout>
 

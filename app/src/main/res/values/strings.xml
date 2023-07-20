@@ -20,6 +20,7 @@
     <string name="complete_task_amount_q">Награда за выполнение (₽)</string>
     <string name="complete_task_percents_q">Прогресс при выполнении (%)</string>
     <string name="task_text_q">Опиши задание</string>
+    <string name="choose_goal_like_main">Выбрать цель главной</string>
     <string name="task_text">Описание задания</string>
     <string name="goals">Цели</string>
     <string name="delete_goal">Удалить цель</string>
