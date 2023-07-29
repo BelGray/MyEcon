@@ -81,7 +81,7 @@ public class ShowFinGoalInfoActivity extends AppCompatActivity {
 
         binding.minusTwoImageButton.setOnClickListener(view -> {
 
-            if (currentGoal.getProgress() > 0){
+            if (currentGoal.getProgress() > 1){
                 goalsVM.setProgress(goalId, currentGoal.getProgress() - 2);
             }
 
@@ -89,7 +89,9 @@ public class ShowFinGoalInfoActivity extends AppCompatActivity {
 
         binding.plusTwoImageButton.setOnClickListener(view -> {
 
-            if (currentGoal.getProgress() < currentGoal.getAmount()) {
+            if (currentGoal.getProgress() + 2 > currentGoal.getAmount()) {
+                goalsVM.setProgress(goalId, currentGoal.getAmount());
+            } else {
                 goalsVM.setProgress(goalId, currentGoal.getProgress() + 2);
             }
 
