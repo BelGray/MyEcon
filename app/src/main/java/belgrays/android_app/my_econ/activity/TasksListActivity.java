@@ -119,7 +119,7 @@ public class TasksListActivity extends AppCompatActivity {
                         tasksVM.deleteTaskById(task.getId());
                         Toast.makeText(this, "Этот путь был, наверное, нелегким.. Но тем не менее цель достигнута! МОЛОДЕЦ!", Toast.LENGTH_SHORT).show();
                     } else {
-                        goalsVM.setProgress(goal.getId(), task.getAward());
+                        goalsVM.setProgress(goal.getId(), goal.getProgress() + task.getAward());
                         tasksVM.deleteTaskById(task.getId());
                         Toast.makeText(this, "Задание выполнено! Двигайся и достигай цели дальше!", Toast.LENGTH_SHORT).show();
                     }
