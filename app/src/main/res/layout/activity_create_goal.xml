@@ -9,7 +9,10 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="615dp">
+        android:layout_height="615dp"
+        android:layout_above="@id/goBackButton"
+        android:layout_marginBottom="15dp"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -139,6 +142,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/goalCurrentAmountTextInputLayout"
+                        android:layout_marginBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:errorEnabled="true"
@@ -179,6 +183,7 @@
                         android:id="@+id/goalCurrentProgressTextInputLayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
                         app:errorEnabled="true"
                         >
 

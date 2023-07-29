@@ -8,10 +8,12 @@
     >
 
     <RelativeLayout
+        android:id="@+id/goalItemRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
+        <RelativeLayout
+            android:id="@+id/goalTextRelativeLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@+id/goalProgress"
@@ -22,20 +24,21 @@
             android:layout_marginStart="15dp"
             android:layout_marginBottom="15dp"
             android:layout_marginEnd="15dp"
+            android:clickable="false"
             >
 
-            <TextView
-                android:id="@+id/goalText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/goal"
-                android:textColor="@color/light_purple"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                />
+                <TextView
+                    android:id="@+id/goalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/goal"
+                    android:textColor="@color/light_purple"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    />
 
 
-        </ScrollView>
+        </RelativeLayout>
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/goalProgressLine"

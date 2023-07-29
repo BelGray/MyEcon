@@ -18,12 +18,12 @@
             >
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/mainGoalCardView"
+                android:id="@+id/noMainGoalCardView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:cardBackgroundColor="@color/purple_for_ui"
                 android:padding="10dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 >
 
                 <RelativeLayout
@@ -32,9 +32,9 @@
                     >
 
                     <ImageView
+                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
                         android:src="@drawable/no_any_main_goal" />
 
                 </RelativeLayout>
@@ -44,12 +44,12 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/noMainGoalCardView"
+                android:id="@+id/mainGoalCardView"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 app:cardBackgroundColor="@color/purple_for_ui"
                 android:padding="10dp"
-                android:visibility="visible"
+                android:visibility="gone"
                 >
 
                 <RelativeLayout

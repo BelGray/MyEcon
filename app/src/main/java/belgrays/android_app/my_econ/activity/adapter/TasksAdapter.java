@@ -21,6 +21,7 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
 
     List<Tasks> tasksList;
     OnItemClickListener onItemClickListener;
+    OnCardClickListener onCardClickListener;
 
     @NonNull
     @Override
@@ -69,6 +70,14 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
                     onItemClickListener.onClick(tasksList.get(position));
                 }
             });
+
+            itemView.setOnClickListener(view -> {
+                int position = getAbsoluteAdapterPosition();
+                if (onCardClickListener != null && position != RecyclerView.NO_POSITION) {
+                    onCardClickListener.onClick(tasksList.get(position));
+                }
+            });
+
         }
 
     }
@@ -79,6 +88,14 @@ public class TasksAdapter extends RecyclerView.Adapter<TasksAdapter.ViewHolder> 
 
     public void setOnTaskCompletedButtonClickListener(OnItemClickListener onItemClickListener){
         this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnCardClickListener {
+        void onClick(Tasks tasks);
+    }
+
+    public void setOnCardClickListener(OnCardClickListener onCardClickListener){
+        this.onCardClickListener = onCardClickListener;
     }
 
 }

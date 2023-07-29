@@ -33,6 +33,7 @@
     <string name="tasks">Задания</string>
     <string name="cancel">Отменить</string>
     <string name="save">Сохранить</string>
+    <string name="task">Задание</string>
     <string name="delete">Удалить</string>
     <string name="confirm">Подтвердить</string>
     <string name="fin_goal">Финансовая цель</string>

@@ -40,8 +40,8 @@ public class GoalsRepository {
         service.execute(() -> goalsDao.setMain(id, main));
     }
 
-    public LiveData<List<Goals>> getMainGoal(){
-        return goalsDao.getMainGoal();
+    public LiveData<List<Goals>> getMainGoal(boolean main){
+        return goalsDao.getMainGoal(main);
     }
 
     public void setAchieved(int id, boolean achieved){
@@ -50,6 +50,14 @@ public class GoalsRepository {
 
     public void setProgress(int id, double progress){
         service.execute(() -> goalsDao.setProgress(id, progress));
+    }
+
+    public void setAmount(int id, double amount){
+        service.execute(() -> goalsDao.setAmount(id, amount));
+    }
+
+    public LiveData<Goals> getGoalById(int id){
+        return goalsDao.getGoalById(id);
     }
 
 }

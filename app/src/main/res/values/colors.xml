@@ -11,4 +11,5 @@
     <color name="purple_for_bars_light">#C187F1</color>
     <color name="purple_for_bars_dark">#390E5A</color>
     <color name="success">#4abe72</color>
+    <color name="purple_for_text_background">#7e3db2</color>
 </resources>

@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,12 +36,15 @@ public class GoalsAdapter extends RecyclerView.Adapter<GoalsAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull GoalsAdapter.ViewHolder holder, int position) {
         Goals goal = goalsList.get(position);
         double totalProgressPercents = Tool.calculateProgressPercents(goal.getProgress(), goal.getAmount());
-        holder.goalText.setText(goal.getText());
-        holder.goalProgress.setText(Tool.makeProgressPercentsText(totalProgressPercents, false));
+        holder.goalText.setText(goal.getName());
+        holder.goalProgress.setText(Tool.makeProgressPercentsText((int) totalProgressPercents, false));
         holder.goalProgressLine.setProgress((int) totalProgressPercents);
         if (totalProgressPercents >= 100 || goal.isAchieved()){
             holder.goalProgressLine.setIndicatorColor(holder.appResources.getColor(R.color.success));
             holder.goalProgress.setTextColor(holder.appResources.getColor(R.color.success));
+        } else {
+            holder.goalProgressLine.setIndicatorColor(holder.appResources.getColor(R.color.blue_for_ui));
+            holder.goalProgress.setTextColor(holder.appResources.getColor(R.color.blue_for_ui));
         }
         if (goal.isFinancial()){
             holder.cookieImageView.setVisibility(View.GONE);
@@ -68,6 +73,8 @@ public class GoalsAdapter extends RecyclerView.Adapter<GoalsAdapter.ViewHolder> 
         LinearProgressIndicator goalProgressLine;
         ImageView cookieImageView, rubleImageView;
 
+        RelativeLayout goalTextRelativeLayout;
+
         Resources appResources;
 
         public ViewHolder(@NonNull View itemView) {
@@ -77,6 +84,7 @@ public class GoalsAdapter extends RecyclerView.Adapter<GoalsAdapter.ViewHolder> 
             goalProgressLine = itemView.findViewById(R.id.goalProgressLine);
             cookieImageView = itemView.findViewById(R.id.cookieImageView);
             rubleImageView = itemView.findViewById(R.id.rubleImageView);
+            goalTextRelativeLayout = itemView.findViewById(R.id.goalTextRelativeLayout);
             appResources = itemView.getResources();
 
             itemView.setOnClickListener(view -> {
@@ -85,6 +93,9 @@ public class GoalsAdapter extends RecyclerView.Adapter<GoalsAdapter.ViewHolder> 
                     onItemClickListener.onClick(goalsList.get(position));
                 }
             });
+
+
+
         }
     }
 

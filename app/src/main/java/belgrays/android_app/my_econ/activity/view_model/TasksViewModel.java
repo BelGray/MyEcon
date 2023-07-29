@@ -20,6 +20,14 @@ public class TasksViewModel extends AndroidViewModel {
         repo = new TasksRepository(app);
     }
 
+    public void updateTaskById(int id, String text, double award){
+        repo.updateTaskById(id, text, award);
+    }
+
+    public LiveData<Tasks> getTaskById(int id){
+        return repo.getTaskById(id);
+    }
+
     public void insert(Tasks tasks){
         repo.insert(tasks);
     }
@@ -30,6 +38,14 @@ public class TasksViewModel extends AndroidViewModel {
 
     public LiveData<List<Tasks>> getTasks(boolean financial){
         return repo.getAllTasks(financial);
+    }
+
+    public LiveData<List<Tasks>> getTasksByGoalId(boolean financial, int goalId){
+        return repo.getTasksByGoalId(financial, goalId);
+    }
+
+    public void deleteTasksByGoalId(int goalId){
+        repo.deleteTasksByGoalId(goalId);
     }
 
     public void deleteTaskById(int id){

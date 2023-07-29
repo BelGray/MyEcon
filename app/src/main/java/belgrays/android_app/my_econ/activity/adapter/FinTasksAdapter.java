@@ -22,6 +22,8 @@ public class FinTasksAdapter extends RecyclerView.Adapter<FinTasksAdapter.ViewHo
     List<Tasks> tasksList;
     OnItemClickListener onItemClickListener;
 
+    OnCardClickListener onCardClickListener;
+
     @NonNull
     @Override
     public FinTasksAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -69,6 +71,14 @@ public class FinTasksAdapter extends RecyclerView.Adapter<FinTasksAdapter.ViewHo
                     onItemClickListener.onClick(tasksList.get(position));
                 }
             });
+
+            itemView.setOnClickListener(view -> {
+                int position = getAbsoluteAdapterPosition();
+                if (onCardClickListener != null && position != RecyclerView.NO_POSITION) {
+                    onCardClickListener.onClick(tasksList.get(position));
+                }
+            });
+
         }
 
     }
@@ -77,8 +87,16 @@ public class FinTasksAdapter extends RecyclerView.Adapter<FinTasksAdapter.ViewHo
         void onClick(Tasks tasks);
     }
 
+    public interface OnCardClickListener {
+        void onClick(Tasks tasks);
+    }
+
     public void setOnTaskCompletedButtonClickListener(OnItemClickListener onItemClickListener){
         this.onItemClickListener = onItemClickListener;
+    }
+
+    public void setOnCardClickListener(OnCardClickListener onCardClickListener){
+        this.onCardClickListener = onCardClickListener;
     }
 
 }

@@ -33,6 +33,22 @@ public class TasksRepository {
         return tasksDao.getAllTasks(financial);
     }
 
+    public LiveData<List<Tasks>> getTasksByGoalId(boolean financial, int goalId){
+        return tasksDao.getTasksByGoalId(financial, goalId);
+    }
+
+    public LiveData<Tasks> getTaskById(int id){
+        return tasksDao.getTaskById(id);
+    }
+
+    public void deleteTasksByGoalId(int goalId){
+        service.execute(() -> tasksDao.deleteTasksByGoalId(goalId));
+    }
+
+    public void updateTaskById(int id, String text, double award){
+        service.execute(() -> tasksDao.updateTaskById(id, text, award));
+    }
+
     public void deleteTaskById(int id){
         service.execute(() -> tasksDao.deleteTaskById(id));
     }

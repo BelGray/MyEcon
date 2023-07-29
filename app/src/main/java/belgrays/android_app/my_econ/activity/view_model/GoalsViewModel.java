@@ -4,6 +4,7 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
@@ -39,16 +40,12 @@ public class GoalsViewModel extends AndroidViewModel {
         repo.setMain(id, main);
     }
 
-    public void setGoalAsMain(int id){
-        LiveData<List<Goals>> currentMain = repo.getMainGoal();
-        for (Goals goal : (List<Goals>) currentMain){
-            repo.setMain(goal.getId(), false);
-        }
-        repo.setMain(id, true);
+    public void setAmount(int id, double amount){
+        repo.setAmount(id, amount);
     }
 
-    public LiveData<List<Goals>> getMainGoal(){
-        return repo.getMainGoal();
+    public LiveData<List<Goals>> getMainGoal(boolean main){
+        return repo.getMainGoal(main);
     }
 
     public void setAchieved(int id, boolean achieved){
@@ -58,4 +55,9 @@ public class GoalsViewModel extends AndroidViewModel {
     public void setProgress(int id, double progress){
         repo.setProgress(id, progress);
     }
+
+    public LiveData<Goals> getGoalById(int id){
+        return repo.getGoalById(id);
+    }
+
 }

@@ -1,11 +1,16 @@
 package belgrays.android_app.my_econ.tools;
 
+import android.app.Application;
+
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
+import belgrays.android_app.my_econ.activity.repository.GoalsRepository;
 import belgrays.android_app.my_econ.activity.view_model.GoalsViewModel;
+import belgrays.android_app.my_econ.database.model.Goals;
 
 public class Tool {
 
@@ -24,8 +29,12 @@ public class Tool {
         String awardLetter = "?";
         String digitsPattern = "";
         switch (awardType){
-            case RUBLES: awardLetter = "₽";
-            case PERCENTS: awardLetter = "%";
+            case RUBLES:
+                awardLetter = "₽";
+                break;
+            case PERCENTS:
+                awardLetter = "%";
+                break;
         }
 
         for (int count = 0; count < digitsCountAfterDot; count++) digitsPattern += "#";

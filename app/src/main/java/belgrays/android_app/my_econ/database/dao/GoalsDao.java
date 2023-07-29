@@ -29,13 +29,19 @@ public interface GoalsDao {
     @Query("UPDATE goals SET main = :main WHERE id LIKE :id")
     void setMain(int id, boolean main);
 
-    @Query("SELECT * FROM goals WHERE main LIKE 1")
-    LiveData<List<Goals>> getMainGoal();
+    @Query("SELECT * FROM goals WHERE main LIKE :main")
+    LiveData<List<Goals>> getMainGoal(boolean main);
 
     @Query("UPDATE goals SET achieved = :achieved WHERE id LIKE :id")
     void setAchieved(int id, boolean achieved);
 
     @Query("UPDATE goals SET progress = :progress WHERE id LIKE :id")
     void setProgress(int id, double progress);
+
+    @Query("UPDATE goals SET amount = :amount WHERE id LIKE :id")
+    void setAmount(int id, double amount);
+
+    @Query("SELECT * FROM goals WHERE id LIKE :id")
+    LiveData<Goals> getGoalById(int id);
 
 }
